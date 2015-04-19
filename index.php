@@ -32,6 +32,7 @@
 				<div class="col-md-6">
 					<ul class="list-group text-center" style=" padding-left:25%; padding-right:25%;">
 						<?php
+							$page = 1;
 							if($res = $conn->query("SELECT count(*) as c, category FROM apicrawldata GROUP BY category")) {
 								$page = 1;
 								if(isset($_GET["page"])) {
@@ -42,6 +43,9 @@
 									$row = $res->fetch_assoc();
 									if(trim($row['category']) != "" ){
 										echo "<a  class=\"list-group-item\" href=\"\">" . $row['category'] . "<span class=\"badge\">". $row['c']."</span></a>\n";
+									} else {
+										echo "<a  class=\"list-group-item\" href=\"\"> <br><span class=\"badge\">". $row['c']."</span></a>\n";
+									
 									}
 								}
 							}
@@ -56,7 +60,22 @@
 					<i class="fa fa-android fa-2x pull-left"></i> Download our <br> Android App</a>
 				</div>
 			</div>
-    	<div id="api-list">
+			
+			<nav>
+			  <ul class="pagination">
+			  	<?php
+			  		if($page > 1) {
+						$params = array_merge($_GET, array("page" => ($page-1)));
+						$new_query_string = http_build_query($params);
+						echo "<li ><a href=\"".$new_query_string."\" aria-label=\"Previous\"><span aria-hidden=\"true\">&laquo;</span></a></li>";
+			  		} else {
+			  			echo "<li class=\"disabled\"><a href=\"\" aria-label=\"Previous\"><span aria-hidden=\"true\">&laquo;</span></a></li>";
+			  		}
+			  	?>
+				<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+			  </ul>
+			</nav>
+    	</div>
     	
     	
     	
