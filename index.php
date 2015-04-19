@@ -12,6 +12,17 @@
   </head>
   <body>
   	<div class="container-fluid">
+  		<!-- This is the nav bar-->
+  		<div class = "navbar">
+			<ul class="nav nav-tabs">
+			  <li class="active">
+				<a href="#">Home</a>
+			  </li>
+			  <li><a href="#">...</a></li>
+			  <li><a href="#">...</a></li>
+			</ul>
+		</div>
+		
     	<h1>Hello, world!</h1>
     </div>
     <script src="js/jquery-1.11.2.min.js"></script>
