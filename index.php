@@ -76,7 +76,7 @@
 			  			echo "<li class=\"disabled\"><span aria-hidden=\"true\">&laquo;</span></li>";
 			  		}
 			  		//numbers
-			  		$totalPage = ceil(totalCnt/$ResPerPage);
+			  		$totalPage = ceil($totalCnt/$ResPerPage);
 			  		for($p = 1; $p <= $totalPage; $p++) {
 			  			$params = array_merge($_GET, array("page" => ($p)));
 						$new_query_string = http_build_query($params);
