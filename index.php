@@ -33,12 +33,15 @@
 					<ul class="list-group text-center" style=" padding-left:25%; padding-right:25%;">
 						<?php
 							$page = 1;
+							$totalCnt = 0;
+							$resPerPage = 20;
 							if($res = $conn->query("SELECT count(*) as c, category FROM apicrawldata GROUP BY category")) {
 								$page = 1;
 								if(isset($_GET["page"])) {
 									$page = $_GET["page"];
 								}
-								for ($row_no = ($page-1)*20; $row_no < $page*20; $row_no++) {
+								$totalCnt = $result->num_rows;
+								for ($row_no = ($page-1)*$resPerPage; $row_no < $page*$resPerPage; $row_no++) {
 									$res->data_seek($row_no);
 									$row = $res->fetch_assoc();
 									if(trim($row['category']) != "" ){
@@ -64,6 +67,7 @@
 			<nav>
 			  <ul class="pagination">
 			  	<?php
+			  		//prev arrow
 			  		if($page > 1) {
 						$params = array_merge($_GET, array("page" => ($page-1)));
 						$new_query_string = http_build_query($params);
@@ -71,6 +75,9 @@
 			  		} else {
 			  			echo "<li class=\"disabled\"><span aria-hidden=\"true\">&laquo;</span></li>";
 			  		}
+			  		//numbers
+			  		$totalPage = ceil(totalCnt/$ResPerPage);
+			  		
 			  	?>
 				<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
 			  </ul>
