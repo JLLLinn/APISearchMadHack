@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <script>
 		function showHint(str) {
-			document.getElementById("list-apis-under-category").innerHTML = str.childNodes.item(0).innerHtml;
+			document.getElementById("list-apis-under-category").innerHTML = str.childNodes.item(0);
+			//ToDo
 			return false;
 		}
 	</script>
@@ -52,7 +53,7 @@
 									$res->data_seek($row_no);
 									$row = $res->fetch_assoc();
 									if(trim($row['category']) != "" ){
-										echo "<a  class=\"list-group-item\" href=\"\" onclick=\" return showHint(this)\"><p>" . $row['category'] . "</p><span class=\"badge\">". $row['c']."</span></a>\n";
+										echo "<a  class=\"list-group-item\" href=\"\" onclick=\" return showHint(this)\">" . $row['category'] . "<span class=\"badge\">". $row['c']."</span></a>\n";
 									} else {
 										echo "<a  class=\"list-group-item\" href=\"\" onclick=\" return showHint(this)\"> <br><span class=\"badge\">". $row['c']."</span></a>\n";
 									
