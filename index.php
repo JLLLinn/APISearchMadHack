@@ -66,8 +66,6 @@
 				</div>
 				
 				<div id = "list-apis-under-category" class="col-md-6 text-center">
-					<a class="btn btn-lg " href="#">
-					<i class="fa fa-android fa-2x pull-left"></i> Download our <br> Android App</a>
 				</div>
 			</div>
 			
