@@ -28,18 +28,18 @@
     	
     	
     	<div class = "row">
-    		<div class="col-md-6 text-center overflow-y-scroll">
-    		<div class="list-group overflow-y-scroll">
-				<?php
-					if($res = $conn->query("SELECT category FROM apicrawldata GROUP BY category")) {
-						while ($row = $res->fetch_assoc()) {
-							echo "<a href=\"#\" class=\"list-group-item\">" . $row['category'] . "</a>\n";
+    		<div class="col-md-6 text-center well">
+				<div class="list-group">
+					<?php
+						if($res = $conn->query("SELECT category FROM apicrawldata GROUP BY category")) {
+							while ($row = $res->fetch_assoc()) {
+								echo "<a href=\"#\" class=\"list-group-item\">" . $row['category'] . "</a>\n";
+							}
 						}
-					}
-				?>
+					?>
 					
 				
-			</div>
+				</div>
     		</div>
     			
   			<div class="col-md-6 text-center">
