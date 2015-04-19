@@ -40,15 +40,10 @@
 								for ($row_no = ($page-1)*20; $row_no < $page*20; $row_no++) {
 									$res->data_seek($row_no);
 									$row = $res->fetch_assoc();
-									echo "<a  class=\"list-group-item\" href=\"\">" . $row['category'] . "<span class=\"badge\">". $row['c']."</span></a>\n";
-								}
-								/*
-								while ($row = $res->fetch_assoc()) {
 									if(trim($row['category']) != "" ){
 										echo "<a  class=\"list-group-item\" href=\"\">" . $row['category'] . "<span class=\"badge\">". $row['c']."</span></a>\n";
 									}
 								}
-								*/
 							}
 						?>
 					
