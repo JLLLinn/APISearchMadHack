@@ -28,7 +28,7 @@
     	
     	
     	<?php
-    		if($res = $conn->query("SELECT category FROM apicrawldata GROUPBY category")) {
+    		if($res = $conn->query("SELECT category FROM apicrawldata GROUP BY category")) {
 				while ($row = $res->fetch_assoc()) {
 					echo " category = " . $row['category'] . "\n";
 				}
