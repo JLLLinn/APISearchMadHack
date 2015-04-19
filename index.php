@@ -28,8 +28,8 @@
     	
     	
     	<div class = "row">
-    		<div class="col-md-6 text-center">
-    		<div class="list-group">
+    		<div class="col-md-6 text-center overflow-y-scroll">
+    		<div class="list-group overflow-y-scroll">
 				<?php
 					if($res = $conn->query("SELECT category FROM apicrawldata GROUP BY category")) {
 						while ($row = $res->fetch_assoc()) {
