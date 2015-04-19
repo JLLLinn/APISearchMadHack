@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <script>
 		function showHint(str) {
-			document.getElementById("list-apis-under-category").innerHTML = str.childNodes.item(0);
+			document.getElementById("list-apis-under-category").innerHTML = str.childNodes.item(0).innerHtml;
 			return false;
 		}
 	</script>
