@@ -85,13 +85,20 @@
 			  			
 			  			$params = array_merge($_GET, array("page" => ($p)));
 						$new_query_string = http_build_query($params);
-						if($p == $totalPage) {
+						if($p == $page) {
 			  				echo "<li class=\"active\"><a href=\"".$params."\">".$p."<span class=\"sr-only\">(current)</span></a></li>";
 			  			} else {
 			  				echo "<li><a href=\"".$params."\">".$p."<span class=\"sr-only\">(current)</span></a></li>";
 			  			}
 			  		}
 			  		
+			  		if($page  < $totalPage) {
+						$params = array_merge($_GET, array("page" => ($page+1)));
+						$new_query_string = http_build_query($params);
+						echo "<li ><a href=\"".$new_query_string."\" aria-label=\"Next\"><span aria-hidden=\"true\">»</span></a></li>";
+			  		} else {
+			  			echo "<li class=\"disabled\"><span aria-hidden=\"true\">»</span></li>";
+			  		}
 			  		
 			  	?>
 			  </ul>
