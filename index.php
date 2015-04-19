@@ -10,6 +10,13 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script>
+		function showHint(str) {
+			document.getElementById("list-apis-under-category").innerHTML = str;
+			return;
+		}
+	</script>
+    
   </head>
   <body>
   	
@@ -45,9 +52,9 @@
 									$res->data_seek($row_no);
 									$row = $res->fetch_assoc();
 									if(trim($row['category']) != "" ){
-										echo "<a  class=\"list-group-item\" href=\"\">" . $row['category'] . "<span class=\"badge\">". $row['c']."</span></a>\n";
+										echo "<a  class=\"list-group-item\" href=\"\" onclick=\"showHint(this.value)\">" . $row['category'] . "<span class=\"badge\">". $row['c']."</span></a>\n";
 									} else {
-										echo "<a  class=\"list-group-item\" href=\"\"> <br><span class=\"badge\">". $row['c']."</span></a>\n";
+										echo "<a  class=\"list-group-item\" href=\"\" onclick=\"showHint(this.value)\"> <br><span class=\"badge\">". $row['c']."</span></a>\n";
 									
 									}
 								}
@@ -58,7 +65,7 @@
 					</ul>
 				</div>
 				
-				<div class="col-md-6 text-center">
+				<div id = "list-apis-under-category" class="col-md-6 text-center">
 					<a class="btn btn-lg " href="#">
 					<i class="fa fa-android fa-2x pull-left"></i> Download our <br> Android App</a>
 				</div>
