@@ -82,9 +82,9 @@
 			  			$params = array_merge($_GET, array("page" => ($p)));
 						$new_query_string = http_build_query($params);
 						if($p == $page) {
-			  				echo "<li class=\"active\"><a href=\"".$params."\">".$p."<span class=\"sr-only\">(current)</span></a></li>";
+			  				echo "<li class=\"active\"><a href=\"".$new_query_string."\">".$p."<span class=\"sr-only\">(current)</span></a></li>";
 			  			} else {
-			  				echo "<li><a href=\"".$params."\">".$p."<span class=\"sr-only\">(current)</span></a></li>";
+			  				echo "<li><a href=\"".$new_query_string."\">".$p."<span class=\"sr-only\">(current)</span></a></li>";
 			  			}
 			  		}
 			  		
