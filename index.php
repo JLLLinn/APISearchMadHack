@@ -12,41 +12,43 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
   </head>
   <body>
-  	<div class="container" style = "height: 100%;">
-  		<!-- This is the nav bar-->
-  		<div class = "row">
+  	
+	<div class="container" style = "height: 100%;">
+		<!-- This is the nav bar-->
+		<div class = "row">
 			<ul class="nav nav-tabs">
 			  <li class="active">
-				<a href="#">Home</a>
+				<a href="#api-list">APIs</a>
 			  </li>
-			  <li><a href="#">...</a></li>
+			  <li><a href="#download">Download</a></li>
 			  <li><a href="#">...</a></li>
 			</ul>
 		</div>
+	
+		<h1 class="row text-center">Ap-Eye</h1>
 		
-    	<h1 class="row text-center">Ap-Eye</h1>
-    	
-    	
-    	<div class = "row" style = "height: 100%;">
-    		<div class="col-md-6 text-center well " style="height: 85%; overflow: auto;">
-				<div class="list-group">
-					<?php
-						if($res = $conn->query("SELECT category FROM apicrawldata GROUP BY category")) {
-							while ($row = $res->fetch_assoc()) {
-								echo "<a href=\"#\" class=\"list-group-item\">" . $row['category'] . "</a>\n";
+		<div id="api-list">
+			<div class = "row" style = "height: 100%;">
+				<div class="col-md-6 text-center well " style="height: 85%; overflow: auto;">
+					<div class="list-group">
+						<?php
+							if($res = $conn->query("SELECT category FROM apicrawldata GROUP BY category")) {
+								while ($row = $res->fetch_assoc()) {
+									echo "<a href=\"#\" class=\"list-group-item\">" . $row['category'] . "</a>\n";
+								}
 							}
-						}
-					?>
+						?>
 					
 				
+					</div>
 				</div>
-    		</div>
-    			
-  			<div class="col-md-6 text-center">
-  				<a class="btn btn-lg " href="#">
-  				<i class="fa fa-android fa-2x pull-left"></i> Download our <br> Android App</a>
-  			</div>
-    	</div>
+				
+				<div class="col-md-6 text-center">
+					<a class="btn btn-lg " href="#">
+					<i class="fa fa-android fa-2x pull-left"></i> Download our <br> Android App</a>
+				</div>
+			</div>
+    	<div id="api-list">
     	
     	
     	
@@ -54,18 +56,18 @@
     	
     	
     	
-    	
-    	
-    	<div class = "row">
-    		<div class="col-md-6 text-center">
-    			<a class="btn btn-lg" href="#">
-  				<i class="fa fa-apple fa-2x pull-left"></i> Download our <br> iPhone App</a>
-    		</div>
-    			
-  			<div class="col-md-6 text-center">
-  				<a class="btn btn-lg " href="#">
-  				<i class="fa fa-android fa-2x pull-left"></i> Download our <br> Android App</a>
-  			</div>
+    	<div id="download">
+			<div class = "row">
+				<div class="col-md-6 text-center">
+					<a class="btn btn-lg" href="#">
+					<i class="fa fa-apple fa-2x pull-left"></i> Download our <br> iPhone App</a>
+				</div>
+				
+				<div class="col-md-6 text-center">
+					<a class="btn btn-lg " href="#">
+					<i class="fa fa-android fa-2x pull-left"></i> Download our <br> Android App</a>
+				</div>
+			</div>
     	</div>
     	
     	
