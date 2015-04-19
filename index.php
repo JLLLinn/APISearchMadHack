@@ -40,7 +40,7 @@
 								if(isset($_GET["page"])) {
 									$page = $_GET["page"];
 								}
-								$totalCnt = $result->num_rows;
+								$totalCnt = $res->num_rows;
 								for ($row_no = ($page-1)*$resPerPage; $row_no < $page*$resPerPage; $row_no++) {
 									$res->data_seek($row_no);
 									$row = $res->fetch_assoc();
