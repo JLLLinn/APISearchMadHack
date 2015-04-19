@@ -67,6 +67,7 @@
 			<nav>
 			  <ul class="pagination">
 			  	<?php
+			  		echo $page." ";
 			  		//prev arrow
 			  		if($page > 1) {
 						$params = array_merge($_GET, array("page" => ($page-1)));
