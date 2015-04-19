@@ -15,7 +15,7 @@
 			var xmlhttp = new XMLHttpRequest();
 			xmlhttp.onreadystatechange = function() {
 				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-					document.getElementById("list-apis-under-category").innerHTML = xmlhttp.responseText;
+					document.getElementById("list-apis-under-category").innerHTML = str;
 				}
 			}
 			xmlhttp.open("GET", "showApiList.php?q=" + str, true);
