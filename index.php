@@ -1,3 +1,18 @@
 <?php
-	include('connect.php');	
+	require_once('connect.php');	
 ?>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ap-Eye</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
