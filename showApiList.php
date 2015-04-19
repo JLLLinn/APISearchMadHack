@@ -1,4 +1,4 @@
 <?php
-$q = $_GET["q"];
-echo "Please Work"
+	$q = $_GET["q"];
+	echo $q;
 ?>
