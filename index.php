@@ -34,7 +34,9 @@
 						<?php
 							if($res = $conn->query("SELECT count(*) as c, category FROM apicrawldata GROUP BY category")) {
 								while ($row = $res->fetch_assoc()) {
-									echo "<a  class=\"list-group-item\" href=\"\">" . $row['category'] . "<span class=\"badge\">". $row['c']."</span></a>\n";
+									if(trim($row['category']) != "" ){
+										echo "<a  class=\"list-group-item\" href=\"\">" . $row['category'] . "<span class=\"badge\">". $row['c']."</span></a>\n";
+									}
 								}
 							}
 						?>
