@@ -27,7 +27,7 @@
     	<h1 class="row text-center">Ap-Eye</h1>
     	
     	
-    	<div class = "row">
+    	<div class = "row" style = "height: 100%;">
     		<div class="col-md-6 text-center well " style="overflow: auto;">
 				<div class="list-group">
 					<?php
