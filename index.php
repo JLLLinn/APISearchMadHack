@@ -12,9 +12,14 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <script>
 		function showHint(str) {
-			document.getElementById("list-apis-under-category").innerHTML = str;
-			//ToDo
-			return false;
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange = function() {
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					document.getElementById("list-apis-under-category").innerHTML = xmlhttp.responseText;
+				}
+			}
+			xmlhttp.open("GET", "showApiList.php?q=" + str, true);
+			xmlhttp.send();
 		}
 	</script>
     
