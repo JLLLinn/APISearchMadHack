@@ -77,7 +77,10 @@
 			  		}
 			  		//numbers
 			  		$totalPage = ceil($totalCnt/$ResPerPage);
+			  		echo $totalPage;
 			  		for($p = 1; $p <= $totalPage; $p++) {
+			  			echo $p;
+			  			
 			  			$params = array_merge($_GET, array("page" => ($p)));
 						$new_query_string = http_build_query($params);
 						if($p == $totalPage) {
