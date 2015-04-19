@@ -28,7 +28,7 @@
     	
     	
     	<div class = "row">
-    		<div class="col-md-6 text-center well">
+    		<div class="col-md-6 text-center well " style="overflow: auto;">
 				<div class="list-group">
 					<?php
 						if($res = $conn->query("SELECT category FROM apicrawldata GROUP BY category")) {
