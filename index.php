@@ -76,13 +76,8 @@
 			  			echo "<li class=\"disabled\"><span aria-hidden=\"true\">&laquo;</span></li>";
 			  		}
 			  		//numbers
-			  		echo $totalCnt." ";
-			  		echo $ResPerPage." ";
 			  		$totalPage = ceil($totalCnt/$resPerPage);
-			  		echo $totalPage;
 			  		for($p = 1; $p <= $totalPage; $p++) {
-			  			echo $p;
-			  			
 			  			$params = array_merge($_GET, array("page" => ($p)));
 						$new_query_string = http_build_query($params);
 						if($p == $page) {
@@ -95,9 +90,9 @@
 			  		if($page  < $totalPage) {
 						$params = array_merge($_GET, array("page" => ($page+1)));
 						$new_query_string = http_build_query($params);
-						echo "<li ><a href=\"".$new_query_string."\" aria-label=\"Next\"><span aria-hidden=\"true\">»</span></a></li>";
+						echo "<li ><a href=\"".$new_query_string."\" aria-label=\"Next\"><span aria-hidden=\"true\">&raquo;</span></a></li>";
 			  		} else {
-			  			echo "<li class=\"disabled\"><span aria-hidden=\"true\">»</span></li>";
+			  			echo "<li class=\"disabled\"><span aria-hidden=\"true\">&raquo;</span></li>";
 			  		}
 			  		
 			  	?>
