@@ -23,7 +23,7 @@
 			</ul>
 		</div>
 		
-    	<h1>Hello, world!</h1>
+    	<h1 class="text-center">Hello, world!</h1>
     </div>
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
