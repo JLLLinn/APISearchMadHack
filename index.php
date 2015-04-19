@@ -32,9 +32,9 @@
 				<div class="col-md-6 text-center well " style="height: 85%; overflow: auto;">
 					<ul class="list-group" style="width:50%">
 						<?php
-							if($res = $conn->query("SELECT category FROM apicrawldata GROUP BY category")) {
+							if($res = $conn->query("SELECT count(*) as c, category FROM apicrawldata GROUP BY category")) {
 								while ($row = $res->fetch_assoc()) {
-									echo "<a  class=\"list-group-item\" href=\"\">" . $row['category'] . "<span class=\"badge\">12</span></a>\n";
+									echo "<a  class=\"list-group-item\" href=\"\">" . $row['category'] . "<span class=\"badge\">". $row['c']."</span></a>\n";
 								}
 							}
 						?>
