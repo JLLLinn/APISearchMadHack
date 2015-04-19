@@ -13,7 +13,7 @@
     <script>
 		function showHint(str) {
 			document.getElementById("list-apis-under-category").innerHTML = "asdasdad";
-			return true;
+			return false;
 		}
 	</script>
     
@@ -52,9 +52,9 @@
 									$res->data_seek($row_no);
 									$row = $res->fetch_assoc();
 									if(trim($row['category']) != "" ){
-										echo "<a  class=\"list-group-item\" href=\"\" onclick=\"showHint(this.innerHTML)\">" . $row['category'] . "<span class=\"badge\">". $row['c']."</span></a>\n";
+										echo "<a  class=\"list-group-item\" href=\"\" onclick=\" return showHint(this.innerHTML)\">" . $row['category'] . "<span class=\"badge\">". $row['c']."</span></a>\n";
 									} else {
-										echo "<a  class=\"list-group-item\" href=\"\" onclick=\"showHint(this.innerHTML)\"> <br><span class=\"badge\">". $row['c']."</span></a>\n";
+										echo "<a  class=\"list-group-item\" href=\"\" onclick=\" return showHint(this.innerHTML)\"> <br><span class=\"badge\">". $row['c']."</span></a>\n";
 									
 									}
 								}
