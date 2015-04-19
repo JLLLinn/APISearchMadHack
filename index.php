@@ -20,7 +20,7 @@
 			}
 			xmlhttp.open("GET", "showApiList.php?q=" + str, true);
 			xmlhttp.send();
-			//
+			//to prevent it from loading the page
 			return false;
 		}
 	</script>

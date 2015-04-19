@@ -1,4 +1,4 @@
 <?php
-$q = $_REQUEST["q"];
+$q = $_GET["q"];
 echo $q
 ?>
