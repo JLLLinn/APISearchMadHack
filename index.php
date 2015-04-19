@@ -11,9 +11,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
   </head>
   <body>
-  	<div class="container-fluid">
+  	<div class="container">
   		<!-- This is the nav bar-->
-  		<div class = "row-fluid">
+  		<div class = "row">
 			<ul class="nav nav-tabs">
 			  <li class="active">
 				<a href="#">Home</a>
@@ -23,7 +23,8 @@
 			</ul>
 		</div>
 		
-    	<h1 class="text-center">Hello, world!</h1>
+    	<h1 class="text-center">Ap-Eye</h1>
+    	
     </div>
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
