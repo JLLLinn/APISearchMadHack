@@ -28,9 +28,10 @@
     	
     	
     	<?php
-    		$res = $conn->query("SELECT category FROM apicrawldata GROUPBY category");
-    		while ($row = $res->fetch_assoc()) {
-				echo " category = " . $row['category'] . "\n";
+    		if($res = $conn->query("SELECT category FROM apicrawldata GROUPBY category")) {
+				while ($row = $res->fetch_assoc()) {
+					echo " category = " . $row['category'] . "\n";
+				}
 			}
     	?>
     	
