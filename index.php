@@ -26,6 +26,19 @@
 		
     	<h1 class="row text-center">Ap-Eye</h1>
     	
+    	
+    	<?php
+    		$res = $conn->query("SELECT category FROM apicrawldata GROUPBY category");
+    		while ($row = $res->fetch_assoc()) {
+				echo " category = " . $row['category'] . "\n";
+			}
+    	?>
+    	
+    	
+    	
+    	
+    	
+    	
     	<div class = "row">
     		<div class="span6 text-center">
     			<a class="btn btn-lg" href="#">
