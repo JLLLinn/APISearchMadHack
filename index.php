@@ -27,14 +27,14 @@
     	<h1 class="row text-center">Ap-Eye</h1>
     	
     	<div class = "row">
-    		<div class="span6">
-    			<a class="btn btn-lg btn-success" href="#">
-  				<i class="fa fa-apple fa-2x pull-left"></i> Download our iPhone App</a>
+    		<div class="span6 text-center">
+    			<a class="btn btn-lg" href="#">
+  				<i class="fa fa-apple fa-2x pull-left"></i> Download our <br> iPhone App</a>
     		</div>
     			
-  			<div class="span6">
-  				<a class="btn btn-lg btn-success" href="#">
-  				<i class="fa fa-android fa-2x pull-left"></i> Download our Android App</a>
+  			<div class="span6 text-center">
+  				<a class="btn btn-lg " href="#">
+  				<i class="fa fa-android fa-2x pull-left"></i> Download our <br> Android App</a>
   			</div>
     	</div>
     	
