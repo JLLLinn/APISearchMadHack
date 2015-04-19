@@ -29,8 +29,8 @@
 		
 		<div id="api-list">
 			<div class = "row" style = "height: 100%;">
-				<div class="col-md-6" style="height: 85%; overflow: auto;">
-					<ul class="list-group  text-center" style="width:50%">
+				<div class="col-md-6">
+					<ul class="list-group text-center" style=" padding-left:25%; padding-right:25%;">
 						<?php
 							if($res = $conn->query("SELECT count(*) as c, category FROM apicrawldata GROUP BY category")) {
 								while ($row = $res->fetch_assoc()) {
