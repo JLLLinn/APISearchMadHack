@@ -30,17 +30,17 @@
 		<div id="api-list">
 			<div class = "row" style = "height: 100%;">
 				<div class="col-md-6 text-center well " style="height: 85%; overflow: auto;">
-					<div class="list-group">
+					<ul class="list-group">
 						<?php
 							if($res = $conn->query("SELECT category FROM apicrawldata GROUP BY category")) {
 								while ($row = $res->fetch_assoc()) {
-									echo "<a href=\"#\" class=\"list-group-item\">" . $row['category'] . "</a>\n";
+									echo "<li  class=\"list-group-item\"><a href=\"#\">" . $row['category'] . "</a></li>\n";
 								}
 							}
 						?>
 					
 				
-					</div>
+					</ul>
 				</div>
 				
 				<div class="col-md-6 text-center">
