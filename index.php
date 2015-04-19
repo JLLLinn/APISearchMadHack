@@ -52,9 +52,9 @@
 									$res->data_seek($row_no);
 									$row = $res->fetch_assoc();
 									if(trim($row['category']) != "" ){
-										echo "<a  class=\"list-group-item\" href=\"\" onclick=\"showHint(this.value)\">" . $row['category'] . "<span class=\"badge\">". $row['c']."</span></a>\n";
+										echo "<a  class=\"list-group-item\" href=\"\" onclick=\"showHint(this.innerHTML)\">" . $row['category'] . "<span class=\"badge\">". $row['c']."</span></a>\n";
 									} else {
-										echo "<a  class=\"list-group-item\" href=\"\" onclick=\"showHint(this.value)\"> <br><span class=\"badge\">". $row['c']."</span></a>\n";
+										echo "<a  class=\"list-group-item\" href=\"\" onclick=\"showHint(this.innerHTML)\"> <br><span class=\"badge\">". $row['c']."</span></a>\n";
 									
 									}
 								}
