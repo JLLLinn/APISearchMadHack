@@ -80,7 +80,7 @@
 			  		for($p = 1; $p <= $totalPage; $p++) {
 			  			$params = array_merge($_GET, array("page" => ($p)));
 						$new_query_string = http_build_query($params);
-						if($p = $totalPage) {
+						if($p == $totalPage) {
 			  				echo "<li class=\"active\"><a href=\"".$params."\">".$p."<span class=\"sr-only\">(current)</span></a></li>";
 			  			} else {
 			  				echo "<li><a href=\"".$params."\">".$p."<span class=\"sr-only\">(current)</span></a></li>";
