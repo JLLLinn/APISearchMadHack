@@ -65,14 +65,13 @@
 			</div>
 			
 			<nav>
-			  <ul class="pagination">
+			  <ul class="pagination in-line text-center">
 			  	<?php
-			  		echo $page." ";
 			  		//prev arrow
 			  		if($page > 1) {
 						$params = array_merge($_GET, array("page" => ($page-1)));
 						$new_query_string = http_build_query($params);
-						echo "<li ><a href=\"".$new_query_string."\" aria-label=\"Previous\"><span aria-hidden=\"true\">&laquo;</span></a></li>";
+						echo "<li ><a href=\"?".$new_query_string."\" aria-label=\"Previous\"><span aria-hidden=\"true\">&laquo;</span></a></li>";
 			  		} else {
 			  			echo "<li class=\"disabled\"><span aria-hidden=\"true\">&laquo;</span></li>";
 			  		}
@@ -82,16 +81,16 @@
 			  			$params = array_merge($_GET, array("page" => ($p)));
 						$new_query_string = http_build_query($params);
 						if($p == $page) {
-			  				echo "<li class=\"active\"><a href=\"".$new_query_string."\">".$p."<span class=\"sr-only\">(current)</span></a></li>";
+			  				echo "<li class=\"active\"><a href=\"?".$new_query_string."\">".$p."<span class=\"sr-only\">(current)</span></a></li>";
 			  			} else {
-			  				echo "<li><a href=\"".$new_query_string."\">".$p."<span class=\"sr-only\">(current)</span></a></li>";
+			  				echo "<li><a href=\"?".$new_query_string."\">".$p."<span class=\"sr-only\">(current)</span></a></li>";
 			  			}
 			  		}
 			  		
 			  		if($page  < $totalPage) {
 						$params = array_merge($_GET, array("page" => ($page+1)));
 						$new_query_string = http_build_query($params);
-						echo "<li ><a href=\"".$new_query_string."\" aria-label=\"Next\"><span aria-hidden=\"true\">&raquo;</span></a></li>";
+						echo "<li ><a href=\"?".$new_query_string."\" aria-label=\"Next\"><span aria-hidden=\"true\">&raquo;</span></a></li>";
 			  		} else {
 			  			echo "<li class=\"disabled\"><span aria-hidden=\"true\">&raquo;</span></li>";
 			  		}
