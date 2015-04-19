@@ -76,6 +76,7 @@
 			  			echo "<li class=\"disabled\"><span aria-hidden=\"true\">&laquo;</span></li>";
 			  		}
 			  		//numbers
+			  		echo $totalCnt;
 			  		$totalPage = ceil($totalCnt/$ResPerPage);
 			  		echo $totalPage;
 			  		for($p = 1; $p <= $totalPage; $p++) {
