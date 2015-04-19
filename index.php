@@ -27,13 +27,29 @@
     	<h1 class="row text-center">Ap-Eye</h1>
     	
     	
-    	<?php
-    		if($res = $conn->query("SELECT category FROM apicrawldata GROUP BY category")) {
-				while ($row = $res->fetch_assoc()) {
-					echo " category = " . $row['category'] . "\n";
-				}
-			}
-    	?>
+    	<div class = "row">
+    		<div class="col-md-8 text-center">
+    		<div class="list-group">
+				<?php
+					if($res = $conn->query("SELECT category FROM apicrawldata GROUP BY category")) {
+						while ($row = $res->fetch_assoc()) {
+							echo "<a href=\"#\" class=\"list-group-item active\">" . $row['category'] . "</a>\n";
+						}
+					}
+				?>
+					
+				
+			</div>
+    		</div>
+    			
+  			<div class="col-md-8 text-center">
+  				<a class="btn btn-lg " href="#">
+  				<i class="fa fa-android fa-2x pull-left"></i> Download our <br> Android App</a>
+  			</div>
+    	</div>
+    	
+    	
+    	
     	
     	
     	
@@ -41,12 +57,12 @@
     	
     	
     	<div class = "row">
-    		<div class="span6 text-center">
+    		<div class="col-md-8 text-center">
     			<a class="btn btn-lg" href="#">
   				<i class="fa fa-apple fa-2x pull-left"></i> Download our <br> iPhone App</a>
     		</div>
     			
-  			<div class="span6 text-center">
+  			<div class="col-md-8 text-center">
   				<a class="btn btn-lg " href="#">
   				<i class="fa fa-android fa-2x pull-left"></i> Download our <br> Android App</a>
   			</div>
