@@ -13,7 +13,7 @@
   <body>
   	<div class="container-fluid">
   		<!-- This is the nav bar-->
-  		<div class = "navbar">
+  		<div class = "row-fluid">
 			<ul class="nav nav-tabs">
 			  <li class="active">
 				<a href="#">Home</a>
