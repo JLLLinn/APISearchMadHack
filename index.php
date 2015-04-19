@@ -78,7 +78,7 @@
 			  		//numbers
 			  		echo $totalCnt." ";
 			  		echo $ResPerPage." ";
-			  		$totalPage = ceil($totalCnt/$ResPerPage);
+			  		$totalPage = ceil($totalCnt/$resPerPage);
 			  		echo $totalPage;
 			  		for($p = 1; $p <= $totalPage; $p++) {
 			  			echo $p;
