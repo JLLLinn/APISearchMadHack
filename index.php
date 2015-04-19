@@ -13,7 +13,7 @@
     <script>
 		function showHint(str) {
 			document.getElementById("list-apis-under-category").innerHTML = "asdasdad";
-			return;
+			return true;
 		}
 	</script>
     
