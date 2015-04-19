@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
   </head>
   <body>
-  	<div class="container">
+  	<div class="container" style = "height: 100%;">
   		<!-- This is the nav bar-->
   		<div class = "row">
 			<ul class="nav nav-tabs">
@@ -28,7 +28,7 @@
     	
     	
     	<div class = "row" style = "height: 100%;">
-    		<div class="col-md-6 text-center well " style="overflow: auto;">
+    		<div class="col-md-6 text-center well " style="height: 85%; overflow: auto;">
 				<div class="list-group">
 					<?php
 						if($res = $conn->query("SELECT category FROM apicrawldata GROUP BY category")) {
