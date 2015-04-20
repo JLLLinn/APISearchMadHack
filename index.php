@@ -43,7 +43,7 @@
 	
 		<h1 class="row text-center">Ap-Eye</h1>
 		
-		<div id="api-list">
+		<div id="api-list text-center">
 			<div class = "row" style = "height: 100%;">
 				<div class="col-md-6">
 					<ul class="list-group text-center" style=" padding-left:25%; padding-right:25%;">
