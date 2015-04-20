@@ -74,7 +74,9 @@
 					</ul>
 				</div>
 				
-				<div id = "list-apis-under-category" class="col-md-6 text-center">
+				<div  class="col-md-6 text-center">
+					<ul id = "list-apis-under-category" class="list-group text-center" style=" padding-left:25%; padding-right:25%;">
+					</ul>
 				</div>
 			</div>
 			
