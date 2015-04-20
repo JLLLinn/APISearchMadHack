@@ -75,7 +75,7 @@
 				</div>
 				
 				<div  class="col-md-6 text-center">
-					<ul id = "list-apis-under-category" class="list-group text-center" style="max-height: 600px; ; padding-left:25%; padding-right:25%; overflow:auto;">
+					<ul id = "list-apis-under-category" class="list-group text-center" style="max-height: 600px; width:auto; overflow:auto;">
 					</ul>
 				</div>
 			</div>
